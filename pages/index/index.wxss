@@ -1,0 +1,47 @@
+.placeholder{
+  margin: 5px;
+  text-align: center;
+  line-height: 310rpx;
+  height:195rpx;
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/52f1175bd6c04049b123a8f08edd3fd3_200w_1200h.jpg);
+  background-size: cover;
+  color:#fff;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.img1{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a24790cea56011e6bc9d0242ac110002_200w_200h.jpg);
+}
+
+.img2{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a1c1f180a56011e6947d0242ac110002_200w_200h.jpg);
+}
+
+.img3{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/catpic-20150327-%E6%B1%A4%E7%B2%A5%E4%B8%BB%E9%A3%9F.jpg);
+}
+
+.img4{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a276a832a56011e6bc9d0242ac110002_200w_200h.jpg);
+}
+
+.img5{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a243ec26a56011e6bc9d0242ac110002_200w_200h.jpg);
+}
+
+.img6{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a1cb7a48a56011e6947d0242ac110002_200w_200h.jpg);
+}
+
+.img7{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a2579492a56011e6bc9d0242ac110002_200w_200h.jpg);
+}
+
+.img8{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a251366aa56011e6947d0242ac110002_200w_200h.jpg);
+}
+
+.img9{
+  background-image: url(http://ofn881vu0.bkt.clouddn.com/a1afafa2a56011e6bc9d0242ac110002_200w_200h.jpg);
+}

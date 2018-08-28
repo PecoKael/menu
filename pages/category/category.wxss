@@ -1,0 +1,19 @@
+.placeholder{
+  margin: 5px;
+  text-align: center;
+  background-color: #f8f8f8;
+  background-size: cover;
+  color:#999;
+  border:1px solid #eee;
+  font-size:15px;
+}
+.clearfix:after{
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clearfix{
+  zoom:1;
+}

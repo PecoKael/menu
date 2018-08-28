@@ -1,0 +1,40 @@
+<view class="page" style='background:#fff;height:100%;'>
+    <view class="page__bd" style="padding-top:48px;">
+        <view class="weui-search-bar" style="position:fixed;width:100%;top:0;z-index:10;">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="今天想吃什么呢(๑´ڡ`๑)" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="inputConfirm" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">今天想吃什么呢(　´・◡・｀)</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+            <view class="weui-flex">
+                <view class="weui-flex__item"><view class="placeholder img6" bindtap="goList" id="1" data-name="家常菜">家常菜</view></view>
+                <view class="weui-flex__item"><view class="placeholder img5" bindtap="goList" id="2" data-name="快手菜">快手菜</view></view>
+                <view class="weui-flex__item"><view class="placeholder img4" bindtap="goList" id="4" data-name="素菜">素菜</view></view>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item"><view class="placeholder img1" bindtap="goList" id="3" data-name="创意菜" >创意菜</view></view>
+                <view class="weui-flex__item"><view class="placeholder img2"  bindtap="goList" id="6" data-name="烘培">烘培</view></view>
+                <view class="weui-flex__item"><view class="placeholder img3"  bindtap="goList" id="7" data-name="面食">面食</view></view>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item"><view class="placeholder img7" bindtap="goList" id="61" data-name="小吃">小吃</view></view>
+                <view class="weui-flex__item"><view class="placeholder img8"  bindtap="goList" id="58" data-name="下酒菜">下酒菜</view></view>
+                <view class="weui-flex__item"><view class="placeholder img9"  bindtap="goList" id="9" data-name="自制调味">自制调味</view></view>
+            </view>
+        </view>
+        <view style='padding:5px 5px;'>
+          <button type="default" bindtap='goCategory'>查看所有分类</button>
+        </view>
+    </view>
+</view>

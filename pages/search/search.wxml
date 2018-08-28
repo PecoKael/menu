@@ -1,0 +1,41 @@
+<view class="page" style='background:#fff;height:100%;'>
+    <view class="page__bd" style="padding-top:48px;">
+        <view class="weui-search-bar" style="position:fixed;width:100%;top:0;z-index:10;">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="今天想吃什么呢(๑´ڡ`๑)" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="inputConfirm" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">今天想吃什么呢(　´・◡・｀)</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+    </view>
+    <scroll-view scroll-y style="height: 100%;" bindscrolltolower="lower">
+      <view class="weui-cells weui-cells_after-title" wx:if="{{data.length}}">
+        <view class="weui-cell" wx:for="{{data}}" wx:key="{{item.id}}" bindtap="goDetail" id="{{item.id}}">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                <image src="{{item.albums[0]}}" style="width: 100px; height: 90px; display: block; border-radius:4px;"/>
+            </view>
+            <view class="weui-cell__bd">
+                <view style="color:#666;font-weight:bold;">{{item.title}}</view>
+                <view style="font-size: 13px;color: #888888;margin-top:10px;">{{item.ingredients}}</view>
+            </view>
+        </view>
+      </view>
+      <view style="text-align:center;" wx:if="{{listShow == 0}}">
+        没找到相关菜谱，换个关键词试试~
+      </view>
+      <view class="weui-loadmore" wx:if="{{loading == true}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+    </scroll-view>
+
+</view>

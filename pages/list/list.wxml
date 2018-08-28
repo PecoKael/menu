@@ -1,0 +1,17 @@
+<scroll-view scroll-y style="height: 100%;" bindscrolltolower="lower">
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell" wx:for="{{data}}" wx:key="{{item.id}}" bindtap="goDetail" id="{{item.id}}">
+          <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+              <image src="{{item.albums[0]}}" style="width: 100px; height: 90px; display: block; border-radius:4px;"/>
+          </view>
+          <view class="weui-cell__bd">
+              <view style="color:#666;font-weight:bold;">{{item.title}}</view>
+              <view style="font-size: 13px;color: #888888;margin-top:10px;">{{item.ingredients}}</view>
+          </view>
+      </view>
+  </view>
+  <view class="weui-loadmore" wx:if="{{loading == true}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</scroll-view>

@@ -1,0 +1,8 @@
+<view class="page" style='background:#fff;'>
+  <view wx:for="{{result}}" wx:key="{{item.id}}" class="clearfix">
+    <view class="page__title" style="padding-left:10px;">{{item.name}}</view>
+    <view>
+        <view bindtap="goList" id="{{item.id}}" data-name="{{item.name}}" style="width:33%; float:left;" class="weui-flex__item"  wx:for="{{item.list}}" wx:key="{{item.id}}"><view class="placeholder">{{item.name}}</view></view>
+    </view>
+  </view>
+</view>

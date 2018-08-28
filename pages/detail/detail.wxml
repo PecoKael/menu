@@ -1,0 +1,43 @@
+<view class="page" style="background:#fff;">
+    <view class="weui-loadmore" wx:if="{{loading == true}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="page__bd">
+        <image src="{{data.albums[0]}}" style="width: 100%;"/>
+        <view class="weui-article">
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        {{data.imtro}}
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">主料</view>
+                    <view class="weui-cells weui-cells_after-title">
+                      <view class="weui-cell" wx:for="{{ingredients}}" wx:key="item.id">
+                          <view class="weui-cell__bd">{{item.name}}</view>
+                          <view class="weui-cell__ft">{{item.value}}</view>
+                      </view>
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">辅料</view>
+                    <view class="weui-cells weui-cells_after-title">
+                      <view class="weui-cell" wx:for="{{burden}}" wx:key="item.id">
+                          <view class="weui-cell__bd">{{item.name}}</view>
+                          <view class="weui-cell__ft">{{item.value}}</view>
+                      </view>
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">步骤</view>
+                    <view class="weui-article__p" wx:for="{{data.steps}}" wx:key="item.id">
+                        <image style="width:100%;" src="{{item.img}}" mode="aspectFit" />
+                        {{item.step}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
